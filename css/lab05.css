@@ -1,0 +1,15 @@
+.image {
+    position: relative;
+    z-index: 1;
+}
+
+.exit_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.problem-2 {
+    position: relative;
+}
