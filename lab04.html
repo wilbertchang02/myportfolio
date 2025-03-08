@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Lab 4 Webpage
+        </title>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- JavaScript Library-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!-- JQuery Library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Lock/Unlock Icons-->
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/lock.css' rel='stylesheet'>
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/lock-unlock.css' rel='stylesheet'>
+        <!--CSS-->
+        <link href="lab04.css" rel="stylesheet">
+    </head>
+
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align: center; color: white;">CPS 530 Lab 4 - Wilbert Chang</h1>
+        </div>
+    </div>
+
+    <body>
+        <div class="row">
+            <div class="col-sm-3"></div>       
+                <div class="col-sm-6">
+                    <!--
+                    Problem 1:
+                        ● Create a form that asks the user for their name, address and phone number.
+                        For the phone number use the (area code) exchange-number (416)
+                        555-5555 format.
+                        ● Write a JavaScript function to validate the form items name and phone
+                        number (a name cannot have anything but letters and the phone number
+                        must be exactly as shown: 3 digits, a dash, 3 digits, a dash and 4 digits).
+                        ● Write a JavaScript function to transform the phone number into the area
+                        code- exchange-number format like 416-555-5555.
+                        ● Write a JavaScript function to display the name, address and phone number
+                        (with the new format) with large characters and an attractive appearance. Be
+                        creative!
+                        ● Create a button that will validate the form and produce the final display.
+                        Use the DOM only, you cannot refresh the page or use a server-side
+                        program to produce the final display.
+                    -->
+                    <h2 style="color: white;">Problem 1</h2>
+                    <div class="problem-1">
+                        <h1 style="font-size: 50px;">Form</h1>
+                        <form id="form">
+                            <label for="name" style="font-size: 20px;">Name (no numbers):</label>
+                            <input type="text" id="name" placeholder="Name" required><br><br>
+                
+                            <label for="address" style="font-size: 20px;">Address:</label>
+                            <input type="text" id="address" placeholder="Address" required><br><br>
+                
+                            <label for="phone-number" style="font-size: 20px;">Phone Number (e.g. format "(416)555-5555"):</label>
+                            <input type="text" id="phone-number" placeholder="(416)555-5555" required><br><br>
+                            
+                            <button type="button" class="p1-button" onclick="checkAndDisplay()">Submit</button>
+                        </form>
+                
+                        <div id="p1-output"></div>
+            
+                    </div>
+             
+                    <!--
+                    Problem 2:
+                        Write a JavaScript function that counts in real time the number of characters in a <textarea> form element.
+                        Have the number updated in real time and shown in large font next to the input form element.
+                        Create a second function that counts only letters (A-Z and a-z) and display that count as well next to the input form.      
+                    -->
+            
+                    <h2 style="color: white;">Problem 2</h2>
+            
+                    <div class="problem-2">
+                            
+                        <label for="text-area" class="p2-text">This is the text area:</label>
+                        <br>
+                        <textarea id="text-area" rows="10" cols="80" oninput="characterCount()"></textarea>
+                
+                        <div style="font-size: 50px;">Count:</div>
+                        <div id="character-count">Characters: 0</div>
+                        <div id="letter-count">Letters: 0</div>
+            
+                    </div>
+
+                    <!--
+                     Problem 3:
+                        Create a function that creates a list of bookmarks for your favourite websites.
+                        Have the function display each bookmark URL on a separate line along with an
+                        icon indicating if the link is secure or not (https vs. http). Use a closed green
+                        padlock icon for secure and an opened red or grey padlock for unsecured. Show at 
+                        least 2 URLs (one http and one https).
+                    -->
+
+                    <h2 style="color: white;">Problem 3</h2>
+
+                    <div class="problem-3">
+                        <h3 style="font-size: 50px;">My Bookmarks</h3>
+
+                        <label for="text-area" class="p3-text">Enter a website to bookmark: </label>
+                        <input id="p3-input" placeholder="Enter URL">
+                        <button type="button" class="p3-button" onclick="checkURL()">Check URL!</button>
+
+                        <div id="p3-output"></div>
+                    </div>
+                </div>
+            <div class="col-sm-3"></div>
+
+        </div>
+   
+    </body>
+
+    <script type="text/javascript" src="lab04.js"></script>
+
+</html>
+
+
+
+
