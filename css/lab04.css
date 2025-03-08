@@ -1,0 +1,102 @@
+*{box-sizing: border-box;}
+
+[class*="col-"] {float:left; padding: 15px;}
+.row::after {content:""; clear:both; display: table;}
+
+body {
+    background-color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#p1-output {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.displayTitle {
+    font-size: 50px;
+}
+
+.displayName, .displayAddress, .displayPhone {
+    font-size: 30px;
+}
+
+#character-count {
+    font-size: 50px;
+    color: green;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#letter-count {
+    font-size: 50px;
+    color: dodgerblue;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.problem-1 {
+    width: 100%;
+    border-radius: 5px;
+    background-color: lightsalmon;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.problem-2 {
+    width: 100%;
+    border-radius: 5px;
+    background-color: lightsalmon;
+    padding: 20px;
+}
+
+.p1-button {
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.p2-text {
+    font-size: 30px;
+}
+
+#text-area {
+    width: 100%;
+}
+
+.problem-3 {
+    width: 100%;
+    border-radius: 5px;
+    background-color: lightsalmon;
+    padding: 20px;
+}
+
+.p3-text {
+    font-size: 20px;
+}
+
+.p3-button {
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.bookmark-item {
+    font-size: 30px;
+    text-align: center;
+}
+
+.gg-lock {
+    color: green;
+}
+
+.gg-lock-unlock {
+    color: red;
+}
